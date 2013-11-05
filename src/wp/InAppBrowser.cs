@@ -80,14 +80,21 @@ namespace WPCordovaClassLib.Cordova.Commands
                     PhoneApplicationPage page = frame.Content as PhoneApplicationPage;
                     if (page != null)
                     {
-                        CordovaView cView = page.FindName("CordovaView") as CordovaView;
-                        if (cView != null)
+                        Grid layoutRoot = page.FindName("LayoutRoot") as Grid;
+                        if (layoutRoot != null)
                         {
-                            WebBrowser br = cView.Browser;
-                            br.Navigate(loc);
+                            if (layoutRoot.Children.Count > 0)
+                            {
+                                string type = layoutRoot.Children[layoutRoot.Children.Count - 1].ToString();
+                                if (type.Contains("CordovaView"))//取最顶层的View并进行type比较判断确定当前的CordovaView
+                                {
+                                    CordovaView cView = layoutRoot.Children[layoutRoot.Children.Count - 1] as CordovaView;
+                                    WebBrowser br = cView.Browser;
+                                    br.Navigate(loc);
+                                }
+                            }
                         }
                     }
-
                 }
             });
         }
