@@ -37,3 +37,23 @@
  *  CB-5593 iOS: Make InAppBrowser localizable
  *  CB-5591 Change window.escape to encodeURIComponent
  *  sync cordova-mobile-spec test into cordova-plugin-inappbrowser
+
+
+## 0.3.1 (Fri Feb 28 2014)
+
+
+ *  CB-5980 Updated version and RELEASENOTES.md for release 0.3.1
+ *  Add missing import for previous commit
+ *  CB-5756: Android: Use WebView.evaluateJavascript for script injection on Android 4.4+
+ *  Didn't test on ICS or lower, getDrawable isn't supported until Jellybean
+ *  WTF? ubuntu got automerged twice
+ *  add ubuntu platform
+ *  Adding CC-A-2.5 Notice for Assets, modifying plugins to use resources
+ *  Adding the buttons
+ *  Adding drawables to the inAppBrowser.  This doesn't look quite right, but it's a HUGE improvement over the previous settings
+ *  CB-5756: Add missing import
+ *  CB-5756: Android: Use WebView.evaluateJavascript for script injection on Android 4.4+
+ *  Delete stale test/ directory
+ *  Remove _alive from InAppBrowser.js since it didn't catch the case where the browser is closed by the user.
+ *  CB-5733 Fix IAB.close() not working if called before show() animation is done
+ *  CB-5719 Incremented plugin version on dev branch.
