@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
            id="org.apache.cordova.inappbrowser"
-      version="0.3.0">
+      version="0.3.1">
 
     <name>InAppBrowser</name>
     <description>Cordova InAppBrowser Plugin</description>
@@ -18,8 +18,8 @@
     <js-module src="www/InAppBrowser.js" name="InAppBrowser">
         <clobbers target="window.open" />
     </js-module>
-
-    <!-- android -->
+    
+    <!--  -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="InAppBrowser"> 
@@ -33,6 +33,23 @@
 
         <source-file src="src/android/InAppBrowser.java" target-dir="src/org/apache/cordova/inappbrowser" />
         <source-file src="src/android/InAppChromeClient.java" target-dir="src/org/apache/cordova/inappbrowser" />
+
+        <!--  drawable src/android/resources -->
+        <resource-file src="src/android/res/drawable-hdpi/ic_action_next_item.png" target="res/drawable-hdpi/ic_action_next_item.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_action_next_item.png" target="res/drawable-mdpi/ic_action_next_item.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_action_next_item.png" target="res/drawable-xhdpi/ic_action_next_item.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_action_next_item.png" target="res/drawable-xxhdpi/ic_action_next_item.png" />
+
+        <resource-file src="src/android/res/drawable-hdpi/ic_action_previous_item.png" target="res/drawable-hdpi/ic_action_previous_item.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_action_previous_item.png" target="res/drawable-mdpi/ic_action_previous_item.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_action_previous_item.png" target="res/drawable-xhdpi/ic_action_previous_item.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_action_previous_item.png" target="res/drawable-xxhdpi/ic_action_previous_item.png" />
+
+        <resource-file src="src/android/res/drawable-hdpi/ic_action_remove.png" target="res/drawable-hdpi/ic_action_remove.png" />
+        <resource-file src="src/android/res/drawable-mdpi/ic_action_remove.png" target="res/drawable-mdpi/ic_action_remove.png" />
+        <resource-file src="src/android/res/drawable-xhdpi/ic_action_remove.png" target="res/drawable-xhdpi/ic_action_remove.png" />
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_action_remove.png" target="res/drawable-xxhdpi/ic_action_remove.png" />
+
     </platform>
     
     <!-- amazon-fireos -->
@@ -56,16 +73,16 @@
     </platform>
 
     <!-- ios -->
-    <platform name="ios">
+    <platform name="ios">    
         <config-file target="config.xml" parent="/*">
             <feature name="InAppBrowser">
-                <param name="ios-package" value="CDVInAppBrowser" />
+                <param name="ios-package" value="CDVInAppBrowser" /> 
             </feature>
         </config-file>
 
         <header-file src="src/ios/CDVInAppBrowser.h" />
 	    <source-file src="src/ios/CDVInAppBrowser.m" />
-
+	    
 	    <framework src="CoreGraphics.framework" />
     </platform>
 
@@ -104,5 +121,5 @@
             <merges target="" />
         </js-module>
     </platform>
-
+        
 </plugin>
