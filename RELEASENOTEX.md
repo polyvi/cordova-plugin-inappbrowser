@@ -57,3 +57,11 @@
  *  Remove _alive from InAppBrowser.js since it didn't catch the case where the browser is closed by the user.
  *  CB-5733 Fix IAB.close() not working if called before show() animation is done
  *  CB-5719 Incremented plugin version on dev branch.
+
+
+## 0.3.2 (Wed Mar 19 2014)
+
+
+ *  issue 7: Change numExpectedRedirects from 3 to 2 to avoid displaying alerts.
+ *  loadstart called multiple times because of 'www.google.com' redirect, so add expectredirect count in test
+ *  Incremented plugin version on dev branch to 0.3.2-dev
