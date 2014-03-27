@@ -112,10 +112,10 @@
                 }
             }
         }
-        iab.addEventListener('loaderror', logEvent, false);
-        iab.addEventListener('loadstart', logEvent, false);
-        iab.addEventListener('loadstop', logEvent, false);
-        iab.addEventListener('exit', logEvent, false);
+        iab.addEventListener('loaderror', logEvent);
+        iab.addEventListener('loadstart', logEvent);
+        iab.addEventListener('loadstop', logEvent);
+        iab.addEventListener('exit', logEvent);
 
         return iab;
     }
@@ -254,15 +254,15 @@
     Expected result: open successfully in system browser to www.google.com.
 
     <p/>
-    <div class="btn large" onclick="doOpen('http://www.google.com', '_blank', '', 2);">target=_blank</div>
+    <div class="btn large" onclick="doOpen('http://www.google.com', '_blank');">target=_blank</div>
     Expected result: open successfully in InAppBrowser to www.google.com.
 
     <p/>
-    <div class="btn large" onclick="doOpen('http://www.google.com', 'random_string', '', 2);">target=Random</div>
+    <div class="btn large" onclick="doOpen('http://www.google.com', 'random_string');">target=Random</div>
     Expected result: open successfully in InAppBrowser to www.google.com.
 
     <p/>
-    <div class="btn large" onclick="doOpen('http://www.google.com', 'random_string', 'location=no', 2);">target=Random, no location bar<span style="vertical-align:super">*</span></div>
+    <div class="btn large" onclick="doOpen('http://www.google.com', 'random_string', 'location=no');">target=Random, no location bar<span style="vertical-align:super">*</span></div>
     Expected result: open successfully in InAppBrowser to www.google.com with no location bar.
 
     <h1>Non White Listed URL</h1>
@@ -344,19 +344,19 @@
 
     <p/>
     <div class="btn large" onclick="openWithScript('inject.html', 'inject.js');">Script File Injection</div>
-    Expected result: open successfully in InAppBrowser with text "Script file successfully injected"
+    Expected result: open successfully in InAppBrowser with text "Script file successfully injected".
 
     <p/>
     <div class="btn large" onclick="openWithScript('inject.html', 'inject.js', true);">Script File Injection (callback)</div>
-    Expected result: open successfully in InAppBrowser with text "InAppBrowser - Script / Style Injection Test" and alert dialog with the text "Results verified".
+    Expected result: open successfully in InAppBrowser with text "Script file successfully injected" and alert dialog with the text "Results verified".
 
     <p/>
     <div class="btn large" onclick="openWithScript('inject.html');">Script Literal Injection</div>
-    Expected result: open successfully in InAppBrowser with the text "abc" in small font in the top left corner.
+    Expected result: open successfully in InAppBrowser with the text "Script literal successfully injected" .
 
     <p/>
     <div class="btn large" onclick="openWithScript('inject.html', null, true);">Script Literal Injection (callback)</div>
-    Expected result: open successfully in InAppBrowser with text "InAppBrowser - Script / Style Injection Test" and alert dialog with the text "Results verified".
+    Expected result: open successfully in InAppBrowser with the text "Script literal successfully injected" and alert dialog with the text "Results verified".
 
     <h1>Open Hidden </h1>
     <div class="btn large" onclick="openHidden('http://google.com',true);">create hidden</div>
@@ -376,11 +376,11 @@
 
     <h1>Clearing Cache</h1>
 
-    <div class="btn large" onclick="doOpen('http://www.google.com', '_blank', 'clearcache=yes', 2);">Clear Browser Cache</div>
+    <div class="btn large" onclick="doOpen('http://www.google.com', '_blank', 'clearcache=yes');">Clear Browser Cache</div>
     Expected result: ?
 
     <p/>
-    <div class="btn large" onclick="doOpen('http://www.google.com', '_blank', 'clearsessioncache=yes', 2);">Clear Session Cache</div>
+    <div class="btn large" onclick="doOpen('http://www.google.com', '_blank', 'clearsessioncache=yes');">Clear Session Cache</div>
     Expected result: ?
 
     <h1>Video tag</h1>
