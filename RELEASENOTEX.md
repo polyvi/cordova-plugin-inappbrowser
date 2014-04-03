@@ -65,3 +65,10 @@
  *  issue 7: Change numExpectedRedirects from 3 to 2 to avoid displaying alerts.
  *  loadstart called multiple times because of 'www.google.com' redirect, so add expectredirect count in test
  *  Incremented plugin version on dev branch to 0.3.2-dev
+
+
+## 0.3.3 (Thu Apr 03 2014)
+
+
+ *  [iOS] issue 1:Sync cordova manual tests and update the descriptions of expected test results.
+ *  Incremented plugin version on dev branch to 0.3.3-dev
