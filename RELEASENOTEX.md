@@ -72,3 +72,40 @@
 
  *  [iOS] issue 1:Sync cordova manual tests and update the descriptions of expected test results.
  *  Incremented plugin version on dev branch to 0.3.3-dev
+
+
+## 0.3.4 (Tue Apr 29 2014)
+
+
+ *  CB-6452 Updated version and RELEASENOTES.md for release 0.4.0
+ *  CB-6460: Update license headers
+ *  CB-6360: Fix for crash on iOS < 6.0 (closes issue 37)
+ *  CB-3324 Add support for back-button inappbrowser [WP8] if there is no history -> InAppBrowser is closed
+ *  await async calls, resolve warnings
+ *  Make InAppBrowser work with embedded files, using system behavior
+ *  CB-6218 Update docs for BB10
+ *  CB-6402 [WP8] pass empty string instead of null for [optional] windowFeatures string
+ *  CB-6422 [windows8] use cordova/exec/proxy
+ *  CB-3617: Document clearcache and clearsessioncache for ios
+ *  CB-6389 CB-3617: Add clearcache and clearsessioncache options to iOS (like Android)
+ *  Doc update: event name and example param (closes issue 31)
+ *  CB-6253 Add Network Capability to WMAppManifest.xml
+ *  CB-6212 iOS: fix warnings compiled under arm64 64-bit
+ *  CB-6218 Update docs for BB10
+ *  Tweak RELEASENOTES.md (missed a bug fix in last release)
+ *  Incremented plugin version on dev branch.
+ *  Updated version and RELEASENOTES.md for release 0.3.3
+ *  CB-6172 Fix inappbrowser install failure on case-sensitive filesystems.
+ *  CB-5534: Updating the plugin.xml with the new Dialog class
+ *  fix for CB-5534
+ *  Add NOTICE file
+ *  Add NOTICE file
+ *  CB-6114 Incremented plugin version on dev branch.
+ *  CB-6114 Updated version and RELEASENOTES.md for release 0.3.2
+ *  Validate that callbackId is correctly formed
+ *  CB-6035 - Move js-module so it is not loaded on unsupported platforms
+ *  CB-5980 Incremented plugin version on dev branch.
+ *  CB-5980 Updated version and RELEASENOTES.md for release 0.3.1
+ *  Removed some iOS6 Deprecations
+ *  issue 13: Update tests to avoid displaying alerts.
+ *  Incremented plugin version on dev branch to 0.3.4-dev
